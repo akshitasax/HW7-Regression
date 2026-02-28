@@ -2,4 +2,4 @@ numpy
 matplotlib
 pytest
 pandas
-sklearn
+scikit-learn
