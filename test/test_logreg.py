@@ -23,10 +23,10 @@ def test_prediction_with_nsclc_dataset():
         return 1 / (1 + np.exp(-x))
 
     # Load a subset of the real dataset for testing
-    X_train, X_val, y_train, y_val = loadDataset()
+    X, y = loadDataset()
 
     # For testing: use only 5 items to keep it simple
-    X = X_train[:5]
+    X = X[:5]
     num_feats = X.shape[1]
     model = LogisticRegressor(num_feats)
 
@@ -53,7 +53,7 @@ def test_loss_function():
 	model = LogisticRegressor(num_feats)
 	
 	# Load a small batch of data from nsclc.csv for testing
-	X_train, _, y_train, _ = loadDataset()
+	X_train, y_train = loadDataset()
 
 	X = X_train[:5]
 	y_true = y_train[:5]
