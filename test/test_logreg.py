@@ -45,7 +45,7 @@ def test_prediction_with_nsclc_dataset():
     preds = model.make_prediction(X_bias)
 
     # The predictions should exactly match the manual calculation
-    assert preds == expected_preds
+    assert np.all(preds == expected_preds)
 
 def test_loss_function():
 
